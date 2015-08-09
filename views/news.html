@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{{.content}}
+	{{$id := .id}}
+	<br><hr>
+	<h3>Commonts</h3><br>
+		sum:<h4>{{.story.comments}}</h4><br>
+		long:<a href="/lcom/{{$id}}"><h4>{{.story.long_comments}}</h4></a><br>
+		short:<a href="/scom/{{$id}}"><h4>{{.story.short_comments}}</h4></a><br>
+		popularity:<h4>{{.story.popularity}}</h4><br>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{{template "header.html" .}}
+	<div>
+		{{range .content.recent}}
+			<p>
+				<div>
+					<a href="/news/{{.news_id | Newsid}}"><h2>{{.title}}</h2></a>
+					<a href="/news/{{.news_id | Newsid}}"><img src="{{.thumbnail}}"></a>
+				</div>
+			</p><br><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}

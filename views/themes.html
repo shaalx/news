@@ -1,0 +1,15 @@
+{{template "header.html" .}}
+	<h1>{{.content.limit}}</h1>
+	<div>
+		{{range .content.others}}
+			<p>
+				<div>
+					{{$id := .id}}
+					<a href="/theme/{{.id | Newsid}}"><h2>{{.name}}</h2></a>
+					<img src="{{.thumbnail}}">
+					<h3>{{.description}}</h3>
+				</div>
+			</p><br><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}

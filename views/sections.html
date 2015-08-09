@@ -1,0 +1,14 @@
+{{template "header.html" .}}
+	<div>
+		{{range .content.data}}
+			<p>
+				<div>
+					<a href="/section/{{.id | Newsid}}"><h2>{{.name}}</h2></a>
+					<img src="{{.thumbnail}}">
+					<br>
+					<h4>{{.description}}</h4>
+				</div>
+			</p><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}

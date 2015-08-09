@@ -1,0 +1,26 @@
+{{template "header.html" .}}
+	<h1>{{.content.name}}</h1>
+	bg:<img src="{{.content.background}}">
+	image:<img src="{{.content.image}}">
+	editors:
+	<div>
+		{{range .content.editors}}
+			<img src="{{.avatar}}">
+			<a href="{{.url}}"><h3>{{.name}}</h3><h4>{{.bio}}</h4></a>
+		{{end}}
+	</div>
+	<h4>{{.content.description}}</h4><br><br>
+	<div>
+		{{range .content.stories}}
+			<p>
+				<div>
+					{{$id := .id}}
+					<a href="/news/{{.id | Newsid}}"><h2>{{.title}}</h2></a>
+					{{range .images}}
+						<a href="/news/{{$id | Newsid}}"><img src="{{.}}"></a>
+					{{end}}
+				</div>
+			</p><br><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}

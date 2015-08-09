@@ -1,0 +1,16 @@
+{{template "header.html" .}}
+	<h3>{{.content.date}}</h3><br><br>
+	<div>
+		{{range .content.stories}}
+			<p>
+				<div>
+					{{$id := .id}}
+					<a href="/news/{{.id | Newsid}}"><h2>{{.title}}</h2></a>
+					{{range .images}}
+						<a href="/news/{{$id | Newsid}}"><img src="{{.}}"></a>
+					{{end}}
+				</div>
+			</p><br><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}

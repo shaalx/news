@@ -1,0 +1,18 @@
+{{template "header.html" .}}
+	<h1>{{.content.name}}</h1>
+	{{$sid := .sid}}
+	<div>
+		{{range .content.stories}}
+			<p>
+				<div>
+					<a href="/news/{{.id | Newsid}}"><h2>{{.title}}</h2></a>
+					{{range .images}}
+						<img src="{{.}}">
+					{{end}}
+					<br>
+					Before:<a href="/bsection/{{$sid}}/{{TimeStamp .date}}"><h4>{{.display_date}}</h4>{{.date}}</a>
+				</div>
+			</p><hr>
+		{{end}}
+	</div>
+{{template "footer.html" .}}
