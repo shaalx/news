@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/shaalx/news/controllers"
-	_ "github.com/shaalx/news/routers"
+	"github.com/toukii/news/controllers"
+	_ "github.com/toukii/news/routers"
 )
 
 func main() {

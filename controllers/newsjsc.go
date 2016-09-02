@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/httplib"
-	. "github.com/shaalx/news/models"
+	. "github.com/toukii/news/models"
 
 	"fmt"
 	"html/template"
